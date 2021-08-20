@@ -1,3 +1,4 @@
 FROM openjdk:11-jre-slim
-COPY --from=build /home/runner/work/helloworld/helloworld/target/helloworld-1.1.jar /home/helloworld-1.1.jar
-CMD ["java -jar helloworld-1.1.jar"]
+WORKDIR /home
+COPY --from=build /home/runner/work/helloworld/helloworld/target/helloworld-1.1.jar /home
+CMD "java -jar helloworld-1.1.jar"
