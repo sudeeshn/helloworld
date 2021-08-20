@@ -27,6 +27,6 @@ jobs:
       env:
          Docker_USER: ${{ secrets.DOCKER_USER}}
          Docker_PASSWORD: ${{ secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD -url https://hub.docker.com/
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD URL https://hub.docker.com/
     - name: Build docker image  
       run: docker build -f dockerfile --tag java-docker .
