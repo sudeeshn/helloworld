@@ -24,10 +24,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: docker login
-      env:
-         DOCKER_USER: ${{secrets.DOCKER_USER}}
-         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD URL https://hub.docker.com/
+      run: docker login -u sudeesh -p Nlr@2021 https://hub.docker.com
     - name: Build docker image  
       run: docker build -f dockerfile --tag java-docker .
       
