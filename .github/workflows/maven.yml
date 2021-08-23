@@ -26,5 +26,5 @@ jobs:
     - name: docker login
       run: docker login -u sudeesh -p Nlr@2021 
     - name: Build docker image  
-      run: docker build -f dockerfile --tag java-docker .
+      run: docker build -f dockerfile --tag hellowworldimage .
       
